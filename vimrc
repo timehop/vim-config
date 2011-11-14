@@ -140,7 +140,8 @@ nmap <leader>t  :CommandT<CR>
 
 " Re-index ctags, including Gem home
 map <leader>rt  :!/usr/local/bin/ctags -R --exclude=.git --exclude=log * `rvm gemhome`/*<CR>
-map <leader>T   :!rdoc -f tags -o tags * `rvm gemhome` --exclude=.git --exclude=log
+" Prevents generating of rdoc. This will prevent tags file to be generated
+" map <leader>T   :!rdoc -f tags -o tags * `rvm gemhome` --exclude=.git --exclude=log
 
 " Git blame
 map <leader>g   :Gblame<CR>
