@@ -76,8 +76,23 @@ vmap <S-tab>    <gv
 nmap <leader>s  :%s/
 vmap <leader>s  :s/
 
+" Toggle highlight search
+map <Leader>hh :set hlsearch!<CR>
+imap <Leader>hh <ESC>:set hlsearch!<CR>a
+
+" Toggle syntax highlight
+map <Leader>ss :if exists("syntax_on") <Bar>
+  \   syntax off <Bar>
+  \ else <Bar>
+  \   syntax enable <Bar>
+  \ endif <CR>
+imap <Leader>ss <ESC><Leader>ssi
+
 " Split screen
 map <leader>v   :vsp<CR>
+
+" Shell commands
+map <C-c> :!
 
 " Move between screens
 map <leader>w   ^Ww
