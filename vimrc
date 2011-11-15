@@ -12,7 +12,7 @@ filetype plugin indent on
 " Configuration
 " -------------
 
-colorscheme vividchalk
+colorscheme molokai
 set background=dark
 set guifont=Inconsolata:h24     " Huge and not always there ...
 set guifont=Monaco:h18
