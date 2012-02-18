@@ -154,7 +154,7 @@ imap <D-N>      <Esc>:CommandTFlush<CR>:CommandT<CR>
 nmap <leader>t  :CommandT<CR>
 
 " Re-index ctags, including Gem home
-map <leader>rt  :!/usr/local/bin/ctags -R --exclude=.git --exclude=log * `rvm gemhome`/*<CR>
+map <leader>rt  :!/usr/local/bin/ctags -R --exclude=.git --exclude=log --exclude=coverage * `rvm gemhome`/*<CR>
 " Prevents generating of rdoc. This will prevent tags file to be generated
 " map <leader>T   :!rdoc -f tags -o tags * `rvm gemhome` --exclude=.git --exclude=log
 
