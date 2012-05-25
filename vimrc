@@ -246,6 +246,7 @@ autocmd BufWritePre *.rb,*.yml,*.js,*.json,*.css,*.less,*.sass,*.html,*.xml,*.er
 au BufRead,BufNewFile *.thor set filetype=ruby
 au BufRead,BufNewFile *.god set filetype=ruby
 au BufRead,BufNewFile Gemfile* set filetype=ruby
+au BufRead,BufNewFile Guardfile* set filetype=ruby
 au BufRead,BufNewFile Vagrantfile set filetype=ruby
 au BufRead,BufNewFile soloistrc set filetype=ruby
 
