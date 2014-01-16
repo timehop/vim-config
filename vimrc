@@ -147,16 +147,20 @@ map <leader>b   :FufBuffer<CR>
 map <leader>f   <Plug>PeepOpen
 map <leader><C-N> :FufFile **/<CR>
 
-" Command-T
-map <D-e>       :CommandTBuffer<CR>
-map <D-N>       :CommandTFlush<CR>:CommandT<CR>
-imap <D-N>      <Esc>:CommandTFlush<CR>:CommandT<CR>
-nmap <leader>t  :CommandT<CR>
+" CtrlP
+nmap <leader>t  :CtrlP<CR>
 
 " Re-index ctags, including Gem home
 map <leader>rt  :!/usr/local/bin/ctags -R --exclude=.git --exclude=log --exclude=coverage * `rvm gemhome`/*<CR>
 " Prevents generating of rdoc. This will prevent tags file to be generated
 " map <leader>T   :!rdoc -f tags -o tags * `rvm gemhome` --exclude=.git --exclude=log
+
+" jump to definition
+nmap <leader>d <C-]>
+" jump back from definition
+nmap <leader>c <C-t>
+" open definition in a new vertical split
+nmap <leader>s :vsp <CR><C-w>l:exec("tag ".expand("<cword>"))<CR>"
 
 " Git blame
 map <leader>g   :Gblame<CR>
